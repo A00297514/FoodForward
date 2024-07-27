@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FoodDonationApp.Views.UserPage"
+             Title="User Profile">
+
+    <StackLayout Padding="20">
+        <!-- User ID -->
+        <Label Text="User ID" FontSize="Medium"/>
+        <Entry Placeholder="Enter User ID" Text="{Binding UserId}" IsReadOnly="True"/>
+
+        <!-- User Name -->
+        <Label Text="Name" FontSize="Medium"/>
+        <Entry Placeholder="Enter Name" Text="{Binding Name}"/>
+
+        <!-- User Email -->
+        <Label Text="Email" FontSize="Medium"/>
+        <Entry Placeholder="Enter Email" Text="{Binding Email}" Keyboard="Email"/>
+
+        <!-- User Password -->
+        <Label Text="Password" FontSize="Medium"/>
+        <Entry Placeholder="Enter Password" Text="{Binding Password}" IsPassword="True"/>
+
+        <!-- User Contact Number -->
+        <Label Text="Contact Number" FontSize="Medium"/>
+        <Entry Placeholder="Enter Contact Number" Text="{Binding ContactNumber}" Keyboard="Telephone"/>
+
+        <!-- User Address -->
+        <Label Text="Address" FontSize="Medium"/>
+        <Editor Placeholder="Enter Address" Text="{Binding Address}" HeightRequest="100"/>
+
+        <!-- User Is Admin -->
+        <Switch IsToggled="{Binding IsAdmin}"/>
+        <Label Text="Administrator" FontSize="Medium"/>
+
+        <!-- Save Button -->
+        <Button Text="Save" Command="{Binding SaveUserCommand}" VerticalOptions="EndAndExpand"/>
+    </StackLayout>
+</ContentPage>
