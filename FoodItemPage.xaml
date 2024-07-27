@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FoodDonationApp.Views.FoodItemPage"
+             Title="Food Item Details">
+
+    <StackLayout Padding="20">
+        <!-- Item ID -->
+        <Label Text="Item ID" FontSize="Medium"/>
+        <Entry Placeholder="Enter Item ID" Text="{Binding ItemId}" IsReadOnly="True"/>
+
+        <!-- Item Name -->
+        <Label Text="Name" FontSize="Medium"/>
+        <Entry Placeholder="Enter Item Name" Text="{Binding Name}"/>
+
+        <!-- Item Quantity -->
+        <Label Text="Quantity" FontSize="Medium"/>
+        <Entry Placeholder="Enter Quantity" Text="{Binding Quantity}" Keyboard="Numeric"/>
+
+        <!-- Expiration Date -->
+        <Label Text="Expiration Date" FontSize="Medium"/>
+        <DatePicker Date="{Binding ExpirationDate}" />
+
+        <!-- Item Category -->
+        <Label Text="Category" FontSize="Medium"/>
+        <Picker SelectedItem="{Binding Category}" Title="Select Category">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Fruits</x:String>
+                    <x:String>Vegetables</x:String>
+                    <x:String>Canned Goods</x:String>
+                    <x:String>Dairy</x:String>
+                    <x:String>Bakery</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <!-- Description -->
+        <Label Text="Description" FontSize="Medium"/>
+        <Editor Placeholder="Enter Description" Text="{Binding Description}" HeightRequest="100"/>
+
+        <!-- Weight -->
+        <Label Text="Weight (kg)" FontSize="Medium"/>
+        <Entry Placeholder="Enter Weight" Text="{Binding Weight}" Keyboard="Numeric"/>
+
+        <!-- Save Button -->
+        <Button Text="Save" Command="{Binding SaveFoodItemCommand}" VerticalOptions="EndAndExpand"/>
+    </StackLayout>
+</ContentPage>
