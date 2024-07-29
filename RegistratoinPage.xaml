@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FoodForwardApp.RegistrationPage">
+	
+	
+    <StackLayout Padding="20">
+        <!-- User Name -->
+        <Label Text="Name" FontSize="Medium"/>
+        <Entry Placeholder="Enter Name" Text="{Binding name}"/>
+
+        <!-- Phone Number -->
+        <Label Text="Phone Number" FontSize="Medium"/>
+        <Entry Placeholder="Enter Phone Number" Text="{Binding phoneNumber}" Keyboard="Telephone"/>
+
+        <!-- Email -->
+        <Label Text="Email" FontSize="Medium"/>
+        <Entry Placeholder="Enter Email" Text="{Binding email}" Keyboard="Email"/>
+
+        <!-- Password -->
+        <Label Text="Password" FontSize="Medium"/>
+        <Entry Placeholder="Enter Password" Text="{Binding password}" IsPassword="True"/>
+
+        <!-- Re-enter Password -->
+        <Label Text="Re-enter Password" FontSize="Medium"/>
+        <Entry Placeholder="Re-enter Password" Text="{Binding reEnterPassword}" IsPassword="True"/>
+
+        <!-- Accept Terms & Conditions -->
+        <StackLayout Orientation="Horizontal">
+            <CheckBox IsChecked="{Binding acceptTerms}"/>
+            <Label Text="Accept terms and conditions" VerticalOptions="Center"/>
+        </StackLayout>
+
+        <!-- Submit Button -->
+        <Button Text="Submit" Command="{Binding SubmitCommand}" VerticalOptions="EndAndExpand"/>
+    </StackLayout>
+</ContentPage>
