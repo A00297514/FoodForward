@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 namespace FoodForwardApp.Models
 {
     /// <summary>
-    /// The Volunteer class represents the details of a volunteer
+    /// The Volunteer class represents the details of a volunteer or an NGO 
     /// registering for the FoodForwardApp. It includes fields for capturing
-    /// the volunteer's name, contact information, address, and estimated time.
+    /// the User name, contact information, address, and estimated time.
     /// </summary>
     public class Volunteer
     {

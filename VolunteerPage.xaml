@@ -1,0 +1,24 @@
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FoodForwardApp.VolunteerPage">
+    <StackLayout Padding="20">
+        <!-- Volunteer's Name -->
+        <Label Text="Volunteer's Name" FontSize="Medium"/>
+        <Entry Placeholder="Enter Volunteer's Name" Text="{Binding Name}"/>
+
+        <!-- Volunteer's Number -->
+        <Label Text="Volunteer's Number" FontSize="Medium"/>
+        <Entry Placeholder="Enter Volunteer's Number" Text="{Binding Number}" Keyboard="Telephone"/>
+
+        <!-- Volunteer's Address -->
+        <Label Text="Volunteer's Address" FontSize="Medium"/>
+        <Editor Placeholder="Enter Volunteer's Address" Text="{Binding Address}" HeightRequest="100"/>
+
+        <!-- Estimated Time -->
+        <Label Text="Estimated Time" FontSize="Medium"/>
+        <Entry Placeholder="Enter Estimated Time" Text="{Binding EstimatedTime}"/>
+
+        <!-- Submit Button -->
+        <Button Text="Submit" Command="{Binding SubmitCommand}" VerticalOptions="EndAndExpand"/>
+    </StackLayout>
+</ContentPage>
