@@ -57,34 +57,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Remove="FoodItemPage.xaml.cs" />
-	  <Compile Remove="UserPage.xaml.cs" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <MauiXaml Remove="FoodItemPage.xaml" />
-	  <MauiXaml Remove="UserPage.xaml" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Page Include="FoodItemPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </Page>
-	  <Page Include="FoodItemPage.xaml.cs">
-	    <DependentUpon>FoodItemPage.xaml</DependentUpon>
-	  </Page>
-	  <Page Include="UserPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </Page>
-	  <Page Include="UserPage.xaml.cs">
-	    <DependentUpon>UserPage.xaml</DependentUpon>
-	  </Page>
-	</ItemGroup>
-
-	<ItemGroup>
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="ViewModels\" />
 	</ItemGroup>
 
 </Project>

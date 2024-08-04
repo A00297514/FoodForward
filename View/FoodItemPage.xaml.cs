@@ -1,13 +1,14 @@
 using Microsoft.Maui.Controls;
 using FoodForwardApp.Models;
-namespace FoodForwardApp;
+
+namespace FoodForwardApp.View;
 
 
     public partial class FoodItemPage : ContentPage
 {
     public FoodItemPage()
     {
-        InitializeComponent();
+       // InitializeComponent();
         BindingContext = new FoodItem
         {
             ItemId = 0,
