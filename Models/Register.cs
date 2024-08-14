@@ -16,24 +16,31 @@ namespace FoodForwardApp.Models
     /// </summary>
 
 
-    public class Register
+    using System.ComponentModel.DataAnnotations;
+
+    public class RegistrationModel
     {
-        // Stores User Name from the Registration page
+        [Required]
+        [StringLength(100, MinimumLength = 1, ErrorMessage = "Name is required")]
         public string Name { get; set; }
 
-        // Stores Phone Number from the Registration page
-        public string PhoneNum { get; set; }
+        [Required]
+        [RegularExpression(@"^\+91\s\d{10}$", ErrorMessage = "Phone number must be 10 digits long and start with +91")]
+        public string PhoneNumber { get; set; }
 
-        // Stores Email from the Registration page
+        [Required]
+        [EmailAddress(ErrorMessage = "Invalid email address")]
         public string Email { get; set; }
 
-        // Stores Password from the Registration page
+        [Required]
+        [StringLength(100, MinimumLength = 6, ErrorMessage = "Password must be at least 6 characters long")]
         public string Password { get; set; }
 
-        // Stores RePassword from the Registration page
-        public string RePassword { get; set; }
+        [Required]
+        [Compare("Password", ErrorMessage = "Passwords do not match")]
+        public string ConfirmPassword { get; set; }
 
-        // Determines if the AcceptTerms checkbox is checked in the Registration page
+        [Required]
         public bool AcceptTerms { get; set; }
     }
 }
